@@ -1,404 +1,175 @@
-/* Suzana Sehreen — Portfolio Stylesheet */
- 
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
- 
-:root {
-  --ink: #16181d;
-  --ink-soft: #4a4f5a;
-  --paper: #faf9f7;
-  --card: #ffffff;
-  --line: #e7e4de;
-  --pink: #ec4899;
-  --pink-dark: #be185d;
-  --gold: #d4a017;
-}
- 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
- 
-html {
-  scroll-behavior: smooth;
-}
- 
-body {
-  font-family: 'Inter', sans-serif;
-  color: var(--ink);
-  background: var(--paper);
-  line-height: 1.65;
-}
- 
-.row {
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 0 28px;
-}
- 
-h2 {
-  font-family: 'Fraunces', serif;
-  font-weight: 600;
-  font-size: clamp(28px, 3.6vw, 38px);
-  margin-bottom: 40px;
-}
- 
-h3 {
-  font-family: 'Fraunces', serif;
-  font-weight: 600;
-  font-size: 21px;
-  margin-bottom: 10px;
-}
- 
-a {
-  text-decoration: none;
-  color: inherit;
-}
- 
-img {
-  max-width: 100%;
-  display: block;
-}
- 
-/* ***** HEADER ***** */
- 
-.header {
-  background: linear-gradient(135deg, #1b1023 0%, #2b1236 55%, #3a1440 100%);
-  color: #fdf7fb;
-  min-height: 92vh;
-  position: relative;
-  overflow: hidden;
-}
- 
-.header::after {
-  content: "";
-  position: absolute;
-  top: -120px;
-  right: -120px;
-  width: 420px;
-  height: 420px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(236, 72, 153, 0.35), transparent 70%);
-}
- 
-.nav {
-  padding: 26px 0;
-  position: relative;
-  z-index: 2;
-}
- 
-.nav__items {
-  list-style: none;
-  display: flex;
-  justify-content: flex-end;
-  gap: 32px;
-}
- 
-.nav__link {
-  font-weight: 500;
-  font-size: 14px;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: #eadff0;
-  transition: color 0.2s;
-}
- 
-.nav__link:hover {
-  color: var(--pink);
-}
- 
-.header__text-box {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  min-height: 68vh;
-}
- 
-.header__text {
-  max-width: 640px;
-}
- 
-.heading-primary {
-  font-family: 'Fraunces', serif;
-  font-weight: 700;
-  font-size: clamp(42px, 7vw, 72px);
-  line-height: 1.05;
-  margin-bottom: 20px;
-}
- 
-.heading-primary span {
-  background: linear-gradient(90deg, #f9a8d4, var(--pink));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
- 
-.header__text > p {
-  font-size: 18px;
-  color: #d9c9e0;
-  margin-bottom: 30px;
-  max-width: 460px;
-}
- 
-.btn {
-  display: inline-block;
-  padding: 14px 30px;
-  border-radius: 4px;
-  font-weight: 600;
-  font-size: 14px;
-  letter-spacing: 0.02em;
-  transition: transform 0.2s, background 0.2s;
-}
- 
-.btn--pink {
-  background: var(--pink);
-  color: #fff;
-}
- 
-.btn--pink:hover {
-  background: var(--pink-dark);
-  transform: translateY(-2px);
-}
- 
-/* ***** WORK ***** */
- 
-.work {
-  padding: 90px 0;
-}
- 
-.work__boxes {
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-}
- 
-.work__box {
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 40px;
-  align-items: center;
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  padding: 36px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
-}
- 
-.work__list {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin: 14px 0 20px;
-}
- 
-.work__list li {
-  font-size: 13px;
-  font-weight: 500;
-  padding: 6px 14px;
-  border: 1px solid var(--pink);
-  color: var(--pink-dark);
-  border-radius: 20px;
-  background: #fdf0f6;
-}
- 
-.work__text p {
-  color: var(--ink-soft);
-}
- 
-.work__links {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  margin-top: 8px;
-}
- 
-.link__text {
-  font-weight: 600;
-  color: var(--pink-dark);
-  font-size: 14px;
-}
- 
-.link__text span {
-  display: inline-block;
-  transition: transform 0.2s;
-}
- 
-.link__text:hover span {
-  transform: translateX(4px);
-}
- 
-.work__image-box {
-  border-radius: 8px;
-  overflow: hidden;
-  border: 1px solid var(--line);
-}
- 
-.work__image {
-  width: 100%;
-  height: 320px;
-  object-fit: cover;
-}
- 
-/* ***** ABOUT ***** */
- 
-.about {
-  background: #211126;
-  color: #f4ecf7;
-  padding: 90px 0;
-}
- 
-.about h2 {
-  color: #fff;
-}
- 
-.about__content {
-  display: grid;
-  grid-template-columns: 1fr 0.7fr;
-  gap: 56px;
-  align-items: center;
-}
- 
-.about__text p {
-  color: #d9c9e0;
-  margin-bottom: 16px;
-}
- 
-.about__photo-container {
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  padding: 10px;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.03);
-}
- 
-.about__photo {
-  border-radius: 6px;
-  height: 380px;
-  width: 100%;
-  object-fit: cover;
-  object-position: center 20%;
-}
- 
-/* ***** CONTACT ***** */
- 
-.contact {
-  padding: 90px 0;
-  text-align: center;
-}
- 
-.contact__info p {
-  max-width: 560px;
-  margin: 0 auto 28px;
-  color: var(--ink-soft);
-  font-size: 16px;
-}
- 
-.contact .btn {
-  background: var(--ink);
-  color: #fff;
-}
- 
-.contact .btn:hover {
-  background: var(--pink-dark);
-}
- 
-/* ***** FOOTER ***** */
- 
-.footer {
-  background: #16181d;
-  color: #cfcfd6;
-  padding: 40px 0;
-  text-align: center;
-}
- 
-.footer__social-links {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-bottom: 18px;
-}
- 
-.footer__social-image {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid rgba(255, 255, 255, 0.25);
-  opacity: 0.85;
-  transition: opacity 0.2s, transform 0.2s, border-color 0.2s;
-}
- 
-.footer__social-link-item a:hover .footer__social-image {
-  opacity: 1;
-  transform: translateY(-3px);
-  border-color: var(--pink);
-}
- 
-.footer p {
-  font-size: 13px;
-  color: #8b8b93;
-}
- 
-.back-to-top {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  background: var(--pink);
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.4);
-  transition: transform 0.2s;
-}
- 
-.back-to-top:hover {
-  transform: translateY(-3px);
-}
- 
-/* ***** RESPONSIVE ***** */
- 
-@media (max-width: 800px) {
-  .nav__items {
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
- 
-  .header__text-box {
-    text-align: center;
-    justify-content: center;
-  }
- 
-  .header__text {
-    margin: 0 auto;
-  }
- 
-  .header__text > p {
-    margin-left: auto;
-    margin-right: auto;
-  }
- 
-  .work__box,
-  .about__content {
-    grid-template-columns: 1fr;
-  }
- 
-  .work__image {
-    height: 240px;
-  }
- 
-  .about__photo {
-    height: 300px;
-  }
-}
- 
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="index.css">
 
-  
+  <title>
+    Suzana Sehreen | CSE Student at University of Asia Pacific, Dhaka.
+  </title>
+
+  <meta name="description" content="Portfolio of Suzana Sehreen, a Computer Science & Engineering student at University of Asia Pacific.">
+  <meta name="keywords" content="Suzana Sehreen, CSE Student, University of Asia Pacific, Java, Cybersecurity, CTF" />
+</head>
+
+<body>
+
+  <!-- ***** Header ***** -->
+
+  <header class="header" role="banner" id="top">
+    <div class="row">
+      <nav class="nav" role="navigation">
+        <ul class="nav__items">
+          <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+          <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+          <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__text-box row">
+      <div class="header__text">
+        <h1 class="heading-primary">
+          <span>Suzana Sehreen</span>
+        </h1>
+        <p>A CSE Student at University of Asia Pacific, Dhaka, Bangladesh.</p>
+        <a href="#contact" class="btn btn--pink">Get in touch</a>
+      </div>
+    </div>
+  </header>
+
+  <main role="main">
+
+    <!-- ***** Work ***** -->
+
+    <section class="work" id="work">
+      <div class="row">
+        <h2>My Work</h2>
+        <div class="work__boxes">
+
+          <div class="work__box">
+            <div class="work__text">
+              <h3>Hello Everyone 👋</h3>
+              <p>
+                I'm Suzana Sehreen, a Computer Science & Engineering student at University of Asia Pacific,
+                Batch 53. I'm still early in my journey — currently building a strong base in Java, and
+                recently found myself drawn to cybersecurity after taking part in an intra-university CTF
+                contest. No shipped projects yet, but that's exactly what's next.
+              </p>
+              <h3 style="color: #ec4899;">My Skills:</h3>
+              <ul class="work__list">
+                <li>Java</li>
+                <li>Problem Solving</li>
+                <li>Cybersecurity (CTF)</li>
+              </ul>
+
+              <div class="work__links">
+                <a href="https://www.facebook.com/share/1BjXmdRDyN/" target="_blank" class="link__text">
+                  Visit Facebook <span>&rarr;</span>
+                </a>
+              </div>
+            </div>
+            <div class="work__image-box">
+              <img src="pic/suzana-main.jpg" class="work__image" alt="Suzana Sehreen" />
+            </div>
+          </div>
+
+          <div class="work__box">
+            <div class="work__text">
+              <h3>Intra University CTF Contest 3.0</h3>
+              <p>
+                Took part in the Intra University CTF Contest 3.0, organized by the Cyber Security Club,
+                Department of CSE, University of Asia Pacific. Received a Certificate of Participation for
+                stepping up, competing, and showcasing skill in solving security challenges — a first step
+                into the world of cybersecurity.
+              </p>
+              <ul class="work__list">
+                <li>Cybersecurity Fundamentals</li>
+                <li>Problem Solving Under Time Pressure</li>
+                <li>Cyber Security Club, CSE - UAP</li>
+              </ul>
+            </div>
+            <div class="work__image-box">
+              <img src="pic/ctf-certificate.jpg" class="work__image" alt="CTF Certificate of Participation" />
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ***** About ***** -->
+
+    <section class="about" id="about">
+      <div class="row">
+        <h2>About Me</h2>
+        <div class="about__content">
+          <div class="about__text">
+            <p>
+              I'm Suzana Sehreen, a Computer Science & Engineering student at the University of Asia Pacific
+              (UAP), Batch 53, Dhaka, Bangladesh.
+            </p>
+            <p>
+              Right now I'm focused on building a solid foundation in Java, and exploring the security side
+              of computing — I took part in a Cybersecurity CTF contest, which pulled me into how
+              vulnerabilities and defenses actually work in practice. Still early days, but I'm excited to
+              keep learning and building.
+            </p>
+          </div>
+
+          <div class="about__photo-container">
+            <img class="about__photo" src="pic/suzana-main.jpg" alt="Suzana Sehreen" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ***** Contact ***** -->
+
+  <section class="contact" id="contact">
+    <div class="row">
+      <h2>Get in Touch</h2>
+      <div class="contact__info">
+        <p>
+          Want to connect, collaborate, or just talk CS? Whether it's about a CTF team, a project idea, or
+          just saying "Hi 👋" — feel free to reach out. The quickest way to reach me is via email.
+        </p>
+        <a href="mailto:23101139@uap-bd.edu" class="btn">23101139@uap-bd.edu</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ***** Footer ***** -->
+
+  <footer role="contentinfo" class="footer">
+    <div class="row">
+      <ul class="footer__social-links">
+        <li class="footer__social-link-item">
+          <a href="https://github.com/suzanavnc" title="Link to GitHub Profile" target="_blank">
+            <img src="images/github-icon.jpg" class="footer__social-image" alt="GitHub">
+          </a>
+        </li>
+        <li class="footer__social-link-item">
+          <a href="https://www.facebook.com/share/1BjXmdRDyN/" title="Link to Facebook Profile" target="_blank">
+            <img src="images/facebook-icon.jpg" class="footer__social-image" alt="Facebook">
+          </a>
+        </li>
+        <li class="footer__social-link-item">
+          <a href="mailto:23101139@uap-bd.edu" title="Send an Email">
+            <img src="images/gmail-icon.jpg" class="footer__social-image" alt="Email">
+          </a>
+        </li>
+      </ul>
+
+      <p>
+        &copy; 2026 Suzana Sehreen.
+      </p>
+    </div>
+  </footer>
+
+  <a href="#top" class="back-to-top" title="Back to Top">↑</a>
+</body>
+
+</html>
