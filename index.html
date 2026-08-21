@@ -321,15 +321,19 @@ img {
 }
  
 .footer__social-image {
-  width: 20px;
-  height: 20px;
-  opacity: 0.8;
-  transition: opacity 0.2s, transform 0.2s;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  opacity: 0.85;
+  transition: opacity 0.2s, transform 0.2s, border-color 0.2s;
 }
  
 .footer__social-link-item a:hover .footer__social-image {
   opacity: 1;
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  border-color: var(--pink);
 }
  
 .footer p {
